@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="todo-app">
+    <section class="todo-card">
+      <p class="sub-title">오늘의 할 일을 정리해보자!</p>
+      <h1>TODO LIST</h1>
+
+      <form class="todo-form" id="todoForm">
+        <input
+          type="text"
+          id="todoInput"
+          placeholder="할 일을 입력하세요..."
+          autocomplete="off"
+        />
+        <button type="submit">+ 추가</button>
+      </form>
+
+      <ul class="todo-list" id="todoList"></ul>
+
+      <p class="empty-message" id="emptyMessage">아직 등록된 할 일이 없습니다.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
