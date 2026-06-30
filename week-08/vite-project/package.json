@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "json-server": "json-server -p 3000 -s ./server ./server/db.json",
     "dev": "vite",
+    "start:dev": "concurrently \"npm run dev\" \"npm run json-server\"",
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview"

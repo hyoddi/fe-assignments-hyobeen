@@ -1,9 +1,10 @@
-
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router'
 // React는 기본적으로 라우팅 기능이 없어서 React Router 라이브러리를 사용
 
 import App from './App.jsx'
+
+import "./index.css"
 
 createRoot(document.getElementById('root')).render(
 

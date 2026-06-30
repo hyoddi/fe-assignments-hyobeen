@@ -1,9 +1,8 @@
 import { Routes, Route } from "react-router"
-import { Link } from "react-router"
 
-import Home from './components/Home'
+import Home from './components/Home/index'
 import About from "./components/About"
-import ProductDetail from "./components/ProductDetail"
+import ProductDetail from "./components/ProductDetail/index"
 import NotFound from "./components/NotFound"
 
 import Layout from "./components/Layout"
@@ -14,13 +13,13 @@ function App() {
     <>
           
       <Routes>
-        <Route element={<Layout />}/>
+        <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={null} />
+          <Route path="/about" element={<About />} />
           <Route path="/products/:productId" element={<ProductDetail />} />
           {/* :productId -> 동적 Segment, 여기는 고정된 문자열이 아니라 변수라는 뜻 */}
           <Route path="*" element={<NotFound />} /> {/* '*'로 그 지정 외 페이지 처리*/}
-        <Route />
+        </Route>
       </Routes>
       
         {/* 
